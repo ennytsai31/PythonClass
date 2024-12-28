@@ -6,10 +6,11 @@ on:
 
 jobs:                               #workflows執行內容
     build:                          
-        name: run py1               
-        runs-on: ubuntu-latest
-        steps: 
-        - uses: actions/checkout@v2
-        - name: Run python
+        name: run py1               #任務名稱  
+        runs-on: ubuntu-latest      #執行環境
+        steps:                      #要執行的每一步
+        - uses: actions/checkout@v2 #用github actions的checkout第二版執行
+        - name: Run python          #這步的顯示名稱
           run: |
-            python3 test.py # test
+            python3 test.py         #test 執行的程式
+              
