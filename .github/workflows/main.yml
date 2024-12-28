@@ -2,7 +2,7 @@ name: Run Python                    #定義workflows的名稱
 on: 
     push:                           #有push時執行
     schedule:                       #排程設定
-    - cron: 0 * * * *               #crontab格式, 每小時執行
+    - cron: 0 0 * * *               #crontab格式, 每小時執行
 
 jobs:                               #workflows執行內容
     build:                          
@@ -13,4 +13,3 @@ jobs:                               #workflows執行內容
         - name: Run python          #這步的顯示名稱
           run: |
             python3 test.py         #test 執行的程式
-              
